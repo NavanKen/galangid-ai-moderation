@@ -1,0 +1,2 @@
+class GeminiExeptions(Exception):
+    pass
