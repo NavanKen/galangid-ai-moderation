@@ -1,2 +1,0 @@
-[tool.taskipy.tasks]
-dev = "uvicorn app.main:app --reload"
