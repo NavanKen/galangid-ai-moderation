@@ -85,13 +85,6 @@ def build_user_prompt(
     goal_amount: int | None = None,
     category: str | None = None,
 ) -> str:
-    """
-    Bangun user prompt berisi data campaign.
-
-    Prompt ini digabung dengan SYSTEM_PROMPT saat dikirim ke Gemini.
-    SYSTEM_PROMPT = aturan main (statis).
-    User prompt  = data campaign (dinamis per request).
-    """
     parts = [
         "Analisis campaign donasi berikut:\n",
         f"Judul: {title}\n",
