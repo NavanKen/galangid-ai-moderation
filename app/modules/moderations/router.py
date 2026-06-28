@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 
-from app.config.exceptions import GeminiExeptions, GeminiResponseError
+from app.config.exceptions import GeminiException, GeminiResponseError
 from app.modules.moderations.dependencies import get_moderations_service
 from app.modules.moderations.schema import(
     CampaignModerationRequest,
@@ -38,7 +38,7 @@ async def analyze_campaign(
                 "message": str(e),
             }
         )
-    except GeminiExeptions as e:
+    except GeminiException as e:
         raise HTTPException(
             status_code=502,
             detail={

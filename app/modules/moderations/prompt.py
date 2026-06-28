@@ -77,24 +77,3 @@ Balas HANYA dalam format JSON dengan struktur berikut. Jangan tambahkan teks, pe
   "suggestions": [string]
 }
 """
-
-
-def build_user_prompt(
-    title: str,
-    description: str,
-    goal_amount: int | None = None,
-    category: str | None = None,
-) -> str:
-    parts = [
-        "Analisis campaign donasi berikut:\n",
-        f"Judul: {title}\n",
-        f"Deskripsi:\n{description}\n",
-    ]
-
-    if goal_amount is not None:
-        parts.append(f"Target Donasi: Rp {goal_amount:,}\n")
-
-    if category:
-        parts.append(f"Kategori yang Dipilih Pengguna: {category}\n")
-
-    return "\n".join(parts)

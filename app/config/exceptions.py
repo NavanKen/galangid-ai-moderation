@@ -1,4 +1,4 @@
-class GeminiExeptions(Exception):
+class GeminiException(Exception):
     pass
 
 class GeminiResponseError(Exception):

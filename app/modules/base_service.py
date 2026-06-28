@@ -6,7 +6,7 @@ from pydantic import BaseModel, ValidationError
 from typing import TypeVar
 from pydantic import BaseModel
 from app.config.config import settings
-from app.config.exceptions import GeminiExeptions, GeminiResponseError
+from app.config.exceptions import GeminiException, GeminiResponseError
 from app.config.gemini import client
 
 T = TypeVar("T", bound=BaseModel)
@@ -34,7 +34,7 @@ class BaseAIService:
             )
         except Exception as e:
             logger.error("Gemini API Call fauled : %s", e)
-            raise GeminiExeptions(f"Gagal menghubungi Gemini AI: {e}")
+            raise GeminiException(f"Gagal menghubungi Gemini AI: {e}")
         
         result_text = response.text
         if not result_text:
