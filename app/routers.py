@@ -11,4 +11,4 @@ def register_router(app: FastAPI):
     app.include_router(categorization_router)
     app.include_router(recommendation_router)
     app.include_router(scam_detection_router)
-    app.include_router(summarization_router)
+    app.include_router(summarization_router)    

@@ -25,6 +25,8 @@ htmlcov/
 .vscode/
 .idea/
 
+pyproject.toml
+
 # OS
 .DS_Store
 Thumbs.db
