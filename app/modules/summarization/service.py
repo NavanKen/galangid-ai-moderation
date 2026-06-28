@@ -1,5 +1,3 @@
-import logging
-
 from app.modules.base_service import BaseAIService
 from app.modules.summarization.prompt import SYSTEM_PROMPT
 from app.modules.summarization.schema import (
