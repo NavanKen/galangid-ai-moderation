@@ -86,7 +86,7 @@ galangid-ai-moderation/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/username/galangid-ai-moderation.git
+git clone https://github.com/NavanKen/galangid-ai-moderation.git
 cd galangid-ai-moderation
 ```
 
