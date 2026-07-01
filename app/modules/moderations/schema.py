@@ -30,7 +30,6 @@ class CampaignModerationRequest(BaseModel):
         examples=["Kesehatan"],
     )
 
-
 class CampaignModerationResponse(BaseModel):
     """Response terstruktur yang dikembalikan ke NestJS."""
 

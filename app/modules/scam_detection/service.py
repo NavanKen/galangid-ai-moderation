@@ -25,5 +25,6 @@ class ScamDetectionService(BaseAIService):
             user_prompt=user_prompt,
             response_model=ScamDetectionResponse,
         )
+        
         return result
 
